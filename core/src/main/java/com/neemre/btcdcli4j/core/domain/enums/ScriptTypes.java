@@ -15,7 +15,11 @@ import lombok.ToString;
 @JsonInclude(Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public enum ScriptTypes {
-	
+
+	//Map to https://github.com/bitcoin/bitcoin/blob/e561cf4fa865a89254e2e6839b3ef343e06951a2/src/script/standard.cpp
+	WITNESS_V0_KEYHASH("witness_v0_keyhash"),
+	WITNESS_V0_SCRIPTHASH("witness_v0_scripthash"),
+	WITNESS_UNKNOWN("witness_unknown"),
 	PUB_KEY("pubkey"),
 	PUB_KEY_HASH("pubkeyhash"),
 	SCRIPT_HASH("scripthash"),
